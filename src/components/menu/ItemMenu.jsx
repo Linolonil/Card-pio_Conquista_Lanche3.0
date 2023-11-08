@@ -105,11 +105,12 @@ function ItemMenu({
                 <Tab
                   eventKey={parseInt(categoryId)}
                   title={category(parseInt(categoryId))}
+                  key={categoryId}
                 >
                   {sortedItems
                     .filter((item) => item.categoryId === parseInt(categoryId))
                     .filter((item) => item.isVisible).length > 0 ? (
-                    <div className="row">
+                    <div className="row mt-2">
                       {sortedItems
                         .filter(
                           (item) => item.categoryId === parseInt(categoryId)
